@@ -3,4 +3,13 @@ name = "moteos"
 version = "0.1.0"
 edition = "2024"
 
-[dependencies]
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[[bin]]
+name = "moteos"
+test = false
+bench = false
